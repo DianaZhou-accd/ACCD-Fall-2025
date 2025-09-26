@@ -2,10 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            text-decoration: none;
+        }
         header {
-            background-color: rgb(200, 200, 250)
+            background-color: rgb(147, 200, 247);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 20px;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 20px auto 0;
+            text-align: center;
+            border-bottom: 2px solid black;
+            padding-bottom: 15px;
+        }
+
+        nav ul li:last-child {
+            border-bottom: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .active {
+            font-weight: bold;
+        }
+
+        .cursive {
+            font-style: italic;
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex;
+                justify-content: flex-end;
+            }
+            nav ul li {
+                border-bottom: none;
+                margin: 10px;
+                padding: 0;
+        }
+        }
+
+        @media (min-width: 900px) {
+            header {
+                background-color: rgb(50, 50, 250);
+            }
+            }
         }
     </style>
 </head>
@@ -15,12 +71,14 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Work</a></li>
-                <li><a href="#">Blog</a></li>
+                <li class="active cursive another-class"><a href="#">Blog</a></li>
                 <li><a href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo unde neque voluptatibus eius a aliquam quod saepe beatae numquam, recusandae ex dicta reprehenderit temporibus consequatur quasi! Quam tempore aliquam perspiciatis!</p>
+    </main>
     <footer></footer>
 </div>
 </body>
