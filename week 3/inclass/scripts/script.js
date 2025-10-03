@@ -3,11 +3,12 @@ let colorBtn = document.getElementById("changeColor");
 
 let assignRandomColor = function()
 {
-    cBox.style.backgroundColor ="rgb(" +255 +", " + 0 +",0)";
+    let rComp =255 * Math.random();
+    let gComp =255 * Math.random();
+    let bComp =255 * Math.random();
+    cBox.style.backgroundColor ="rgb(" +rComp +", " + gComp +", " + bComp +")";
 }
 
 console.log(cBox);
-
-
 
 colorBtn.addEventListener("click", assignRandomColor);
