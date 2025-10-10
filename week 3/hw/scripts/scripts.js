@@ -1,28 +1,18 @@
-let mainImage = document.getElementById("mainImage");
-let thumbs = document.getElementById("thumbs");
-let playBtn = document.getElementById("play");
-let pauseBtn = document.getElementById("pause");
+const mainImage = document.getElementById('mainImage');
+const thumbs = document.querySelectorAll('.thumbs img');
+const navButtons = document.querySelectorAll('.nav-btn');
 
 let current = 0;
-let timer = null;
 
-thumbs.forEach((thumb, index) => {
-  thumb.addEventListener('click', () => {
-    mainImage.src = thumb.src;
-    current = index;
-  });
-});
-
-function showNext() {
-  current = (current + 1) % thumbs.length;
-  mainImage.src = thumbs[current].src;
+function showImage(index) {
+  current = index;
+  mainImage.src = `pictures/Coalball-ugly-${index + 1}.jpg`;
 }
 
-playBtn.addEventListener('click', () => {
-  if (!timer) timer = setInterval(showNext, 2000);
+thumbs.forEach((thumb, index) => {
+  thumb.addEventListener('click', () => showImage(index));
 });
 
-pauseBtn.addEventListener('click', () => {
-  clearInterval(timer);
-  timer = null;
+navButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => showImage(index));
 });
