@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Basics</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coalball Gallery</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main id="mainImage" src="pictures/Coalball-ugly-1.JPG" alt="Coalball Main Image">
-         <div class="thumbs">
-        <img src="pictures/Coalball-ugly-1.JPG" alt="1">
-        <img src="pictures/Coalball-ugly-2.JPG" alt="2">
-        <img src="pictures/Coalball-ugly-3.JPG" alt="3">
-        <img src="pictures/Coalball-ugly-4.JPG" alt="4">
-      </div>
-    </main>
-    <script src="scripts/scripts.js"></script>
+  <header>
+    <div class="logo">LOGO</div>
+    <nav>
+      <button class="nav-btn" data-index="0">Coalball 1</button>
+      <button class="nav-btn" data-index="1">Coalball 2</button>
+      <button class="nav-btn" data-index="2">Coalball 3</button>
+      <button class="nav-btn" data-index="3">Coalball 4</button>
+    </nav>
+  </header>
 
+  <main>
+    <div class="thumbs">
+      <img src="pictures/Coalball-ugly-1.jpg" alt="Coalball 1">
+      <img src="pictures/Coalball-ugly-2.jpg" alt="Coalball 2">
+      <img src="pictures/Coalball-ugly-3.jpg" alt="Coalball 3">
+      <img src="pictures/Coalball-ugly-4.jpg" alt="Coalball 4">
+    </div>
+
+    <img id="mainImage" src="pictures/Coalball-ugly-1.jpg" alt="Coalball Main">
+  </main>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
