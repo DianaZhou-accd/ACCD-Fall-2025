@@ -14,6 +14,15 @@ let ambience;
 let filt, revb;
 let soundReady = false;
 
+function preload() {
+  // 尝试加载素材；失败则在 setup 里自动降级
+  loadImage('libraries/particle.jpg', (img)=>imgSprite=img, ()=>imgSprite=null);
+  soundFormats('mp3','wav','ogg');
+  ambience = loadSound('libraries/ambience.mp3',
+    ()=>{},                 // ok
+    ()=>{ ambience=null; }  // 用合成器降级
+  );
+}
 
 function setup() {
   createCanvas(600, 600);
