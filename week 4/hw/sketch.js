@@ -16,9 +16,9 @@ let soundReady = false;
 
 function preload() {
   // 尝试加载素材；失败则在 setup 里自动降级
-  loadImage('assets/particle.png', (img)=>imgSprite=img, ()=>imgSprite=null);
+  loadImage('libraries/particle.jpg', (img)=>imgSprite=img, ()=>imgSprite=null);
   soundFormats('mp3','wav','ogg');
-  ambience = loadSound('assets/ambience.mp3',
+  ambience = loadSound('libraries/ambience.mp3',
     ()=>{},                 // ok
     ()=>{ ambience=null; }  // 用合成器降级
   );
