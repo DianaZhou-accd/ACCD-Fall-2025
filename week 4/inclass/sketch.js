@@ -1,8 +1,8 @@
-let posX
-let posT
+let posX;
+let posY;
 
-let velX
-let velY
+let velX;
+let velY;
 
 let radius = 20;
 
