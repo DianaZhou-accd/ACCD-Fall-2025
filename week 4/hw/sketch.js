@@ -29,15 +29,6 @@ function setup() {
   colorMode(HSB, 360, 100, 100);
   noStroke();
 
-  // 生成一个柔光贴图作为后备
-  gfxFallback = createGraphics(64, 64);
-  gfxFallback.clear();
-  gfxFallback.noStroke();
-  for (let r=30; r>0; r--) {
-    const a = map(r, 30, 0, 16, 255);
-    gfxFallback.fill(200, 80, 100, a);
-    gfxFallback.circle(32, 32, r*2);
-  }
 
   // 创建粒子
   for (let i=0; i<COUNT; i++) {
