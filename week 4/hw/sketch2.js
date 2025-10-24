@@ -1,54 +1,51 @@
-let posX;
-let posY;
+let posX, posY, velX, velY
+let diameter = 150
 
-let velX;
-let velY;
+let imgHappy, imgSad, currentImg
+let countDown = 0
 
-let radius = 20;
-let imageSprite;
-let soundOutput;
-
-function preload() {
-  imageSprite = loadImage('libraries/particle.jpg');
-  soundFormats('mp3', 'wav', 'ogg');
-  soundOutput = loadSound('libraries/ambience.mp3');
+function preload(){
+  imgMillet = loadImage("Millet.png")
+  imgCoalball = loadImage("Coalball.jpg")
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  imageMode(CENTER);
-    colorMode(HSB, 360, 100, 100);
-  posX = width * 0.5;
-  posY = height * 0.5;
-
-  velX = -2;
-  velY = 3;
+  createCanvas(800, 600)
+  imageMode(CENTER)
+  
+  posX = width/2
+  posY = height/2
+  
+  velX = random(-5, 5)
+  velY = random(-3.5, 3.5)
+  
+  currentImg = imgHappy
 }
 
 function draw() {
-  posX = posX + velX;
-  posY = posY + velY;
+  background(220)
 
-  if (posY >= height || posY <= 0) {
-    velY = velY * -1;
+  circle(posX, posY, diameter)
+  image(currentImg, posX, posY, diameter, diameter)
+
+  posX = posX + velX
+  posY += velY
+  
+  if(posX + diameter * 0.5 >= width || posX - diameter * 0.5 <= 0){
+    velX = velX * -1
+    currentImg = imgCoalball
+    countDown = 16
   }
-  if (posX >= width || posX <= 0) {
-    velX = velX * -1;
+  if(posY + diameter * 0.5 >= height || posY - diameter * 0.5 <= 0){
+    velY = velY * -1
+    currentImg = imgCoalball
+    countDown = 16
   }
-
-
-  background(0, 0, 85);
   
-  noStroke();
-  
-  fill(posX, 100, 100);
-  
-  circle(posX, posY, radius * 2);
-  
-  stroke(255, 0, 0);
-  strokeWeight(4);
-
-  fill(0, 100, 255);
-
-  rect(width * 0.5 - 50, height * 0.5 - 50, 100, 100);
+  if(countDown > 0 ){
+    countDown--
+  }
+  else {
+    currentImg = imgMillet
+  }
 }
