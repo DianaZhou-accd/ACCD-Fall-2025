@@ -1,25 +1,27 @@
-let posX, posY, velX, velY
-let diameter = 150
+let posX, posY, velX, velY;
+let diameter = 150;
 
-let imgHappy, imgSad, currentImg
-let countDown = 0
+let imgMillet, imgCoalball, currentImg;
+let countDown = 0;
+let hitSound;
 
 function preload(){
-  imgMillet = loadImage("Millet.png")
-  imgCoalball = loadImage("Coalball.jpg")
+  imgMillet = loadImage("Millet.png");
+  imgCoalball = loadImage("Coalball.jpg");
+  hitSound = loadSound("hitSound.mp3");
 }
 
 function setup() {
-  createCanvas(800, 600)
-  imageMode(CENTER)
+  createCanvas(800, 600);
+  imageMode(CENTER);
   
-  posX = width/2
-  posY = height/2
+  posX = width/2;
+  posY = height/2;
   
-  velX = random(-5, 5)
-  velY = random(-3.5, 3.5)
+  velX = random(-5, 5);
+  velY = random(-3.5, 3.5);
   
-  currentImg = imgHappy
+  currentImg = imgMillet
 }
 
 function draw() {
@@ -48,4 +50,11 @@ function draw() {
   else {
     currentImg = imgMillet
   }
+}
+
+function mousePressed() {
+  // 检查鼠标是否在椭圆内
+  let d = dist(mouseX, mouseY, width / 2, height / 2);
+  if (d < 50) 
+    hitSound.play();
 }
