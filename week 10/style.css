@@ -23,6 +23,20 @@ header {
   font-size: 18px;
 }
 
+.media-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3860cb; /* 和header文字颜色一致 */
+  text-align: center; /* 居中显示 */
+  margin: 10px 0; /* 和图片/视频保持间距 */
+  padding: 8px;
+  background: #f5f1c8; /* 和header背景一致 */
+  border-radius: 6px;
+  max-width: 600px; /* 和图片宽度对齐 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 main {
   max-width: 1000px;
   margin: 0 auto;
