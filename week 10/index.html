@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation of week 10 Blinkenlights</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="Documentation">Documentation of week 10 Blinkenlights--Diana Zhou</div>
+    <nav>
+      <button class="nav-btn" data-index="0">record 1</button>
+      <button class="nav-btn" data-index="1">record 2</button>
+      <button class="nav-btn" data-index="2">record 3</button>
+      <button class="nav-btn" data-index="3">record 4</button>
+      <button class="nav-btn" data-index="3">video 1</button>
+      <button class="nav-btn" data-index="4">video 2</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="thumbs">
+        <h3>Record Images</h3>
+        <img src="pictures/1.jpg" alt="Record 0">
+        <img src="pictures/after-add-3386P-1.png" alt="Record 1">
+        <img src="pictures/after-add-3386P-2.png" alt="Record 2">
+        <img src="pictures/before-add-3386P.png" alt="Record 3">
+    </div>
+    <div class="thumbs">
+        <h3>Video Covers</h3>
+        <img src="pictures/video1-cover.jpg" alt="Video 1" data-index="Record 4">
+        <img src="pictures/video2-cover.jpg" alt="Video 2" data-index="Record 5">
+    </div>
+
+    <img id="mainImage" src="pictures/1.jpg" alt="Record Main">
+    <video id="mainVideo" controls style="display: none; width: 100%; max-width: 600px; max-height: 400px; margin: 10px auto; display: block;">
+      <source src="videos&thumbs/video1.mp4" type="video/mp4">
+      <source src="videos&thumbs/video2.mp4" type="video/mp4">
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
