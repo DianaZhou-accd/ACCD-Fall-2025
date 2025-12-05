@@ -47,8 +47,8 @@ main {
 #mainImage, #mainVideo {
   display: block;
   width: 100%;
-  max-width: 800px; /* 最大宽度800px，图片不会超过这个尺寸 */
-  max-height: 600px; /* 最大高度600px */
+  max-width: 1000px; /* 最大宽度1000px，图片不会超过这个尺寸 */
+  max-height: 800px; /* 最大高度800px */
   object-fit: contain; /* 保持比例，不拉伸 */
   margin: 10px auto; /* 居中显示 */
   border-radius: 6px;
