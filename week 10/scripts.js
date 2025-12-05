@@ -3,15 +3,16 @@ const mainImage = document.getElementById('mainImage');
 const mainVideo = document.getElementById('mainVideo'); // 新增：获取视频DOM
 const thumbs = document.querySelectorAll('.thumbs img');
 const navButtons = document.querySelectorAll('.nav-btn');
+const mediaTitle = document.getElementById('mediaTitle');
 
 // 2. 重构数组：区分图片/视频类型（不是只存路径）
 const mediaPaths = [
-  { type: 'image', path: "pictures/1.jpg" },          // 图片1
-  { type: 'image', path: "pictures/after-add-3386P-1.png" }, // 图片2
-  { type: 'image', path: "pictures/after-add-3386P-2.png" }, // 图片3
-  { type: 'image', path: "pictures/before-add-3386P.png" },  // 图片4
-  { type: 'video', path: "videos&thumbs/video1.mp4" },       // 视频1（真实视频路径）
-  { type: 'video', path: "videos&thumbs/video2.mp4" }        // 视频2（真实视频路径）
+  { type: 'image', path: "pictures/before-add-3386P.png", title: "Record 1 - before-add-3386P" },          // 图片1
+  { type: 'image', path: "pictures/after-add-3386P-1.png", title: "Record 2 - after-add-3386P-1" }, // 图片2
+  { type: 'image', path: "pictures/after-add-3386P-2.png", title: "Record 3 - after-add-3386P-2" }, // 图片3
+  { type: 'image', path: "pictures/1.jpg", title: "Record 4 - 1.jpg" },  // 图片4
+  { type: 'video', path: "videos&thumbs/video1.mp4", title: "Video 1" },       // 视频1（真实视频路径）
+  { type: 'video', path: "videos&thumbs/video2.mp4", title: "Video 2" }        // 视频2（真实视频路径）
 ];
 
 let current = 0;
@@ -23,6 +24,8 @@ function showImage(index) {
 
   // 4. 定义media变量（解决核心报错）
   const media = mediaPaths[index];
+
+  mediaTitle.textContent = media.title;
 
   // 5. 图片/视频切换逻辑
   if (media.type === 'image') {
