@@ -1,0 +1,82 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: sans-serif; 
+}
+
+body {
+  background: #fff;
+  text-align: center;
+}
+
+header {
+  background: #f5f1c8; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.Documentation {
+  font-weight: bold;
+  color: #3860cb;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: #d0e890;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-btn:hover {
+  background: #c4df76;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* 修复1：给.thumbs加flex布局，让缩略图横向排列 */
+.thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px; /* 增加间距，更美观 */
+}
+
+/* 修复2：修正缩略图样式，去掉错误的flex，优化尺寸/比例 */
+.thumbs img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover; /* 替换fill，保持图片比例，不拉伸 */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+  /* 新增：防止图片超出容器 */
+  max-width: 100%;
+}
+.thumbs img:hover {
+  border-color: #3860cb; /* 换个显眼的颜色，更易识别 */
+}
+
+/* 修复3：主图尺寸优化，去掉固定height，用max-height+保持比例 */
+#mainImage {
+  width: 100%;
+  max-width: 600px; /* 最大宽度限制 */
+  max-height: 400px; /* 最大高度限制，不强行拉伸 */
+  object-fit: contain; /* 保持图片比例，完整显示（不会裁剪） */
+  display: block;
+  margin: 10px auto;
+  /* 新增：加个边框，更美观 */
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
