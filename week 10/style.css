@@ -28,32 +28,33 @@ main {
   margin: 0 auto;
 }
 
-/* 图片/视频区域样式 */
-.media-section {
-  margin-bottom: 30px;
-  padding: 15px;
-  border: 1px solid #eee;
-  border-radius: 8px;
+/* 缩略图样式（补充：如果缩略图也大，加这个） */
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.thumbs img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
-.media-section h3 {
-  color: #3860cb;
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-/* 统一控制图片/视频尺寸 */
-.media-item {
+/* 核心修改：针对mainImage/mainVideo设置尺寸（和你的ID对应） */
+#mainImage, #mainVideo {
   display: block;
   width: 100%;
-  max-width: 600px; /* 最大宽度限制，避免过大 */
-  max-height: 400px; /* 最大高度限制 */
+  max-width: 600px; /* 最大宽度600px，图片不会超过这个尺寸 */
+  max-height: 400px; /* 最大高度400px */
   object-fit: contain; /* 保持比例，不拉伸 */
-  margin: 10px 0;
+  margin: 10px auto; /* 居中显示 */
   border-radius: 6px;
 }
 
 /* 视频额外样式 */
-.media-item[controls] {
+#mainVideo {
   background: #f9f9f9;
 }
