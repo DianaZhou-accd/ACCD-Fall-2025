@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation of Week 12 MultiuChannel Controller — Diana Zhou</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="documentation-title">
+      Documentation of Week 12 Multichannel Controller - Diana Zhou
+    </div>
+
+    <!-- 分类按钮：Screenshots / Photo / Video -->
+    <nav class="category-nav">
+      <button class="category-btn active" data-target="#screenshots">Screenshots</button>
+      <button class="category-btn" data-target="#photos">Photo Record</button>
+      <button class="category-btn" data-target="#videos">Video Record</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Screenshots 分类 -->
+    <section id="screenshots" class="category-section active">
+      <h3>Screenshots</h3>
+      <div class="thumbs">
+        <img src="records/Arduino_01.png"
+             alt="Arduino_01"
+             data-type="image"
+             data-src="records/Arduino_01.png"
+             data-title="Arduino & Piezo Sensor Setup">
+
+        <img src="records/screenshot_Processing_01.png"
+             alt="screenshot_Processing_01"
+             data-type="image"
+             data-src="records/screenshot_Processing_01.png"
+             data-title="Processing Screenshot 01">
+
+        <img src="records/screenshot_Processing_02.png"
+             alt="screenshot_Processing_02"
+             data-type="image"
+             data-src="records/screenshot_Processing_02.png"
+             data-title="Processing Screenshot 02">
+
+        <img src="records/screenshot_Processing_03.png"
+             alt="screenshot_Processing_03"
+             data-type="image"
+             data-src="records/screenshot_Processing_03.png"
+             data-title="Processing Screenshot 03">
+
+        <img src="records/screenshot_Processing_04.png"
+             alt="screenshot_Processing_04"
+             data-type="image"
+             data-src="records/screenshot_Processing_04.png"
+             data-title="Processing Screenshot 04">
+
+        <img src="records/screenshot_Processing_05.png"
+             alt="screenshot_Processing_05"
+             data-type="image"
+             data-src="records/screenshot_Processing_05.png"
+             data-title="Processing Screenshot 05">
+
+        <img src="records/screenshot_Processing_06.png"
+             alt="screenshot_Processing_06"
+             data-type="image"
+             data-src="records/screenshot_Processing_06.png"
+             data-title="Processing Screenshot 06">
+      </div>
+    </section>
+    
+
+    <!-- 2. Photo Record 分类（实物 + 画面效果照） -->
+    <section id="photos" class="category-section hidden">
+      <h3>Photo Record</h3>
+      <div class="thumbs">
+        <img src="records/snowflower_white.png"
+             alt="snowflower_white"
+             data-type="image"
+             data-src="records/snowflower_white.png"
+             data-title="Snowflake · White Background">
+
+        <img src="records/snowflower_black.png"
+             alt="snowflower_black"
+             data-type="image"
+             data-src="records/snowflower_black.png"
+             data-title="Snowflake · Black Background">
+
+        <img src="records/snowman_white.png"
+             alt="snowman_white"
+             data-type="image"
+             data-src="records/snowman_white.png"
+             data-title="Snowman · White Background">
+
+        <img src="records/snowman_black.png"
+             alt="snowman_black"
+             data-type="image"
+             data-src="records/snowman_black.png"
+             data-title="Snowman · Black Background">
+      </div>
+    </section>
+
+    <!-- 3. Video Record 分类 -->
+    <!-- 3. Video Record 分类 -->
+    <section id="videos" class="category-section hidden">
+    <h3>Video Record</h3>
+    <div class="thumbs">
+        <!-- 封面缩略图，点击后在下面主播放器里播放 video.mp4 -->
+        <img src="records/video_cover.png"
+            alt="Video Cover"
+            data-type="video"
+            data-src="records/video.mp4"
+            data-title="Final Interaction Demo">
+    </div>
+    </section>
+
+
+
+    <!-- 主显示区域：显示当前选中的图片/视频 -->
+    <h2 id="mediaTitle" class="media-title">Documentation of Multichannel Controller</h2>
+
+    <div class="media-viewer">
+    <img id="mainImage" src="records/Arduino_01.png" alt="Main Display Image">
+    <video id="mainVideo" controls class="hidden"
+            poster="records/video_cover.png"></video>
+    </div>
+
+
+        <!-- Hardware Description -->
+    <section class="hardware-section">
+      <h2>Hardware Used</h2>
+      <p>
+        This project uses an <strong>ESP32</strong> microcontroller connected with a 
+        <strong>piezo sensor</strong> and a <strong>digital input push button</strong>.  
+        <br><br>
+        The piezo sensor is used to detect tapping or vibration, which controls 
+        the **color transition speed** in the Processing animation.  
+        The digital button is used to switch between different **display modes** 
+        (snowflake / snowman and background variations).
+        <br><br>
+        Sensor values are sent via serial communication from ESP32 to Processing,
+        where they are mapped into visual changes.
+      </p>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>Built with HTML, CSS &amp; JavaScript · ESP32 + Blinkenlights documentation.</p>
+  </footer>
+</body>
+</html>
