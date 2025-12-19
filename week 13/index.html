@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multichannel Sound + Visual System</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <p class="kicker">ESP32 + Processing, Sound + Visual System by Diana Zhou</p>
+        <h1>Collaborative Button Sampler</h1>
+        <p class="subtitle">
+          An interactive system where four physical buttons trigger sound samples
+          and generate simple butterfly-silhouette visuals.
+          Designed for multiple people to play together.
+        </p>
+      </header>
+
+      <section class="content">
+        <section class="card">
+            <h2>Summary</h2>
+
+            <!-- Video -->
+            <figure class="video-block">
+                <video class="video" controls preload="metadata">
+                <source src="images/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+                <figcaption class="caption">Short demo video (optional caption).</figcaption>
+            </figure>
+
+            <p>
+                I created an interactive system using an ESP32 and Processing.
+                The ESP32 sends data from <strong>four buttons</strong> to a Processing sketch
+                through serial communication. Each button triggers a sound and also
+                creates a visual response on the screen.
+            </p>
+
+            <!-- Gallery (ONLY ONE image shows) -->
+            <section class="gallery" aria-label="Project image gallery">
+                <div class="thumbs" role="navigation" aria-label="Image thumbnails">
+                <a class="thumb" href="#img1"><img src="images/1.png" alt="Thumbnail 1" /></a>
+                <a class="thumb" href="#img2"><img src="images/2.png" alt="Thumbnail 2" /></a>
+                <a class="thumb" href="#img3"><img src="images/3.png" alt="Thumbnail 3" /></a>
+                <a class="thumb" href="#img4"><img src="images/4.png" alt="Thumbnail 4" /></a>
+                <a class="thumb" href="#img5"><img src="images/5.png" alt="Thumbnail 5" /></a>
+                <a class="thumb" href="#img6"><img src="images/6.png" alt="Thumbnail 6" /></a>
+                <a class="thumb" href="#img7"><img src="images/7.png" alt="Thumbnail 7" /></a>
+                <a class="thumb" href="#img8"><img src="images/8.png" alt="Thumbnail 8" /></a>
+                </div>
+
+                <div class="viewer">
+                <figure id="img1" class="frame">
+                    <img src="images/1.png" alt="Project image 1" loading="lazy" />
+                    <figcaption class="caption">Caption 1 (optional)</figcaption>
+                </figure>
+
+                <figure id="img2" class="frame">
+                    <img src="images/2.png" alt="Project image 2" loading="lazy" />
+                    <figcaption class="caption">Caption 2 (optional)</figcaption>
+                </figure>
+
+                <figure id="img3" class="frame">
+                    <img src="images/3.png" alt="Project image 3" loading="lazy" />
+                    <figcaption class="caption">Caption 3 (optional)</figcaption>
+                </figure>
+
+                <figure id="img4" class="frame">
+                    <img src="images/4.png" alt="Project image 4" loading="lazy" />
+                    <figcaption class="caption">Caption 4 (optional)</figcaption>
+                </figure>
+
+                <figure id="img5" class="frame">
+                    <img src="images/5.png" alt="Project image 5" loading="lazy" />
+                    <figcaption class="caption">Caption 5 (optional)</figcaption>
+                </figure>
+
+                <figure id="img6" class="frame">
+                    <img src="images/6.png" alt="Project image 6" loading="lazy" />
+                    <figcaption class="caption">Caption 6 (optional)</figcaption>
+                </figure>
+
+                <figure id="img7" class="frame">
+                    <img src="images/7.png" alt="Project image 7" loading="lazy" />
+                    <figcaption class="caption">Caption 7 (optional)</figcaption>
+                </figure>
+
+                <figure id="img8" class="frame">
+                    <img src="images/8.png" alt="Project image 8" loading="lazy" />
+                    <figcaption class="caption">Caption 8 (optional)</figcaption>
+                </figure>
+                </div>
+            </section>
+
+            <p>
+                I chose buttons as sensors because they are very intuitive:
+                <strong>press once, one action happens</strong>.
+                This clear interaction works well for rhythm and group interaction,
+                and it does not require any learning or explanation.
+            </p>
+
+            <p>
+                In Processing, I used a sound library to play audio files.
+                Each button plays a different sound.
+                Multiple sounds can overlap, slowly building rhythm and structure.
+                The system works like a simple drum pad or sampler.
+            </p>
+
+            <p>
+                For the visuals, I use <strong>butterfly silhouettes</strong> as symbols.
+                Pressing a button creates a butterfly, and other buttons change the
+                butterfly's size and movement speed.
+                These visual changes represent sound intensity, density, and rhythm.
+            </p>
+
+            <!-- Optional: single butterfly image (NOT part of gallery) -->
+            <figure class="inline-media">
+                <img src="images/butterfly.png" alt="Butterfly silhouette" loading="lazy" />
+                <figcaption class="caption">Butterfly silhouette (optional)</figcaption>
+            </figure>
+        </section>
+
+
+        <section class="card">
+            <h2>Designed for Multiple People</h2>
+
+            <p>
+                This system is designed for <strong>multiple people</strong>.
+                Different users can control different buttons at the same time and
+                collaboratively “play” the system together.
+                The interface is simple and easy to join, even for first-time users.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Controls</h2>
+            <ul>
+                <li><strong>BTN1</strong> — Spawn a butterfly (sound trigger)</li>
+                <li><strong>BTN2</strong> — Increase butterfly size (intensity)</li>
+                <li><strong>BTN3</strong> — Increase butterfly speed (density)</li>
+                <li><strong>BTN4</strong> — Reset the system</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Documentation</h2>
+            <p class="muted">
+                Photos and videos documenting the build process, wiring,
+                serial communication, and multi-user interaction.
+            </p>
+
+            <div class="placeholders">
+                <div class="placeholder">Build Photo</div>
+                <div class="placeholder">Processing Demo</div>
+                <div class="placeholder">Performance Video</div>
+                <div class="placeholder">Notes</div>
+            </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
