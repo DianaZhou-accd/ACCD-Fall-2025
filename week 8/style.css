@@ -51,3 +51,26 @@ main {
   font-size: 15px;
   opacity: 0.9;
 }
+
+/* Documentation images */
+
+.doc-image {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.doc-image img {
+  max-width: 100%;
+  width: 360px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.doc-image figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #aaaaaa;
+  font-family: monospace;
+  opacity: 0.8;
+}
