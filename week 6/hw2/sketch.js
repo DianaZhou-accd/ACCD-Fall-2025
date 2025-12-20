@@ -14,8 +14,6 @@ let state = 0;         // 0 init, 1 rod, 2 rod + fish + line
 function setup() {
   let c = createCanvas(800, 500);
 c.parent("container");
-
-  createCanvas(800, 500);
   noStroke();
   textAlign(CENTER);
   textSize(16);
