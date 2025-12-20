@@ -13,12 +13,12 @@ let state = 0;         // 0 init, 1 rod, 2 rod + fish + line
 
 function setup() {
   let c = createCanvas(800, 500);
-c.parent("container");
+  c.parent("container");
+
   noStroke();
   textAlign(CENTER);
   textSize(16);
 
-  // ---------------------------------
   // Create 30 rod particles
   // ---------------------------------
   for (let i = 0; i < 30; i++) {
