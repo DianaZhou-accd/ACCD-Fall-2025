@@ -6,9 +6,9 @@ let countDown = 0;
 let hitSound;
 
 function preload(){
-  imgMillet = loadImage("Millet.png");
-  imgCoalball = loadImage("Coalball.jpg");
-  hitSound = loadSound("hitSound.mp3");
+  imgMillet = loadImage("libraries/Millet.png");
+  imgCoalball = loadImage("libraries/Coalball.jpg");
+  hitSound = loadSound("libraries/hitSound.mp3");
 }
 
 function setup() {
