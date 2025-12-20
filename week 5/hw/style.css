@@ -106,11 +106,4 @@ body {
   }
 }
 
-/* Footer */
-.page-footer {
-  max-width: 980px;
-  margin: 0 auto 30px;
-  padding: 0 16px;
-  color: #666;
-  font-size: 12px;
-}
+
