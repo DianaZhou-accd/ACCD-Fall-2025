@@ -2,21 +2,167 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotation</title>
 
-    <title>Sketch</title>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
 
   <body>
-    <h3>Rotation</h3>
-    <canvas id="arcCanvas"></canvas>
-    <!--<script src="arc.js"></script>-->
-    <script src="arc.js"></script>
-    <script src="rotation.js"></script>
+    <header class="page-header">
+      <h3>Rotation</h3>
+      <p class="sub">
+        Time-based grid oscillation study (p5.js). Below is the step-by-step
+        process documentation with iterations.
+      </p>
+    </header>
+
+    <!-- Sketch -->
+    <section class="sketch-wrap">
+      <!-- p5 will create its own canvas; this placeholder is optional -->
+      <canvas id="arcCanvas"></canvas>
+      <script src="arc.js"></script>
+      <script src="rotation.js"></script>
+    </section>
+
+    <!-- Documentation -->
+    <main class="doc">
+      <h2>Process Documentation (6 Steps)</h2>
+
+      <!-- STEP 1 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 1 — Basic Grid Structure</h3>
+          <p>
+            Built a simple grid using for-loops to establish a stable structure
+            before introducing motion or time.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step1-1.png" alt="Step 1 screenshot 1" />
+            <figcaption>Step 1 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step1-2.png" alt="Step 1 screenshot 2" />
+            <figcaption>Step 1 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 2 — Parameterized Grid (Function & Variable)</h3>
+          <p>
+            Refactored the grid into a function and controlled its density with
+            a variable, making the structure reusable and adjustable.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step2-1.png" alt="Step 2 screenshot 1" />
+            <figcaption>Step 2 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step2-2.png" alt="Step 2 screenshot 2" />
+            <figcaption>Step 2 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- STEP 3 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 3 — Time & Oscillation (sin + time)</h3>
+          <p>
+            Introduced a time variable and used a sine function to oscillate the
+            number of grid lines, creating a rhythmic “breathing” effect.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step3-1.png" alt="Step 3 screenshot 1" />
+            <figcaption>Step 3 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step3-2.png" alt="Step 3 screenshot 2" />
+            <figcaption>Step 3 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- STEP 4 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 4 — Rotation (push/pop transformation)</h3>
+          <p>
+            Applied rotation to the oscillating system using push/pop to isolate
+            transformations and explore spatial motion.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step4-1.png" alt="Step 4 screenshot 1" />
+            <figcaption>Step 4 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step4-2.png" alt="Step 4 screenshot 2" />
+            <figcaption>Step 4 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- STEP 5 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 5 — Layering (second grid with different transform)</h3>
+          <p>
+            Duplicated the grid as a second layer with translate + counter-rotation,
+            creating interference between two similar systems.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step5-1.png" alt="Step 5 screenshot 1" />
+            <figcaption>Step 5 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step5-2.png" alt="Step 5 screenshot 2" />
+            <figcaption>Step 5 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- STEP 6 -->
+      <section class="step">
+        <div class="step-head">
+          <h3>Step 6 — Anchor Shape (readability)</h3>
+          <p>
+            Added a centered rectangle as a visual anchor to make the oscillation
+            and layered rotations easier to read.
+          </p>
+        </div>
+
+        <div class="shots">
+          <figure class="shot">
+            <img src="images/step6-1.png" alt="Step 6 screenshot 1" />
+            <figcaption>Step 6 — Screenshot 1</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="images/step6-2.png" alt="Step 6 screenshot 2" />
+            <figcaption>Step 6 — Screenshot 2</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
