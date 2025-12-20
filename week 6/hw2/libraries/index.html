@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Non-linear Movement System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main id="container">
+      <p class="hint">
+        Non-interactive · Self-running Fishing System — Diana Zhou
+      </p>
+
+      <!-- Documentation -->
+      <section class="doc">
+        <section class="block">
+          <p>
+            I wanted to create a scene of a fishing rod lifting a fish. At first,
+            the particles appear and form the rod, and then the system returns to
+            the initial scene with no particles.
+          </p>
+
+          <div class="img-row">
+            <figure class="img-card">
+              <img src="images/step1-1.png" alt="Process step 1 - image 1" />
+            </figure>
+            <figure class="img-card">
+              <img src="images/step1-2.png" alt="Process step 1 - image 2" />
+            </figure>
+            <figure class="img-card">
+              <img src="images/step1-3.png" alt="Process step 1 - image 3" />
+            </figure>
+          </div>
+        </section>
+
+        <section class="block">
+          <p>
+            However, the original version had too many particles, so I reduced the
+            system to 30 particles and added a fishing line that connects the rod
+            to the fish.
+          </p>
+
+          <div class="img-row">
+            <figure class="img-card">
+              <img src="images/step2-1.png" alt="Process step 2 - image 1" />
+            </figure>
+            <figure class="img-card">
+              <img src="images/step2-2.png" alt="Process step 2 - image 2" />
+            </figure>
+            <figure class="img-card">
+              <img src="images/step2-3.png" alt="Process step 2 - image 3" />
+            </figure>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
