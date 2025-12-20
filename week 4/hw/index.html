@@ -3,16 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    
+
     <title>Non-Interactive Non-Linear Movement by Diana Zhou — p5.js</title>
-    
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    
+
+    <!-- p5 -->
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
-  
+
   <body>
+    <main class="wrap">
+
+      <!-- TITLE -->
+      <section class="card">
+        <h1>Non-Interactive Non-Linear Movement</h1>
+        <p>
+          A p5.js sketch exploring non-interactive, non-linear movement using
+          randomness, images, and sound.
+        </p>
+      </section>
+
+      <!-- VIDEO -->
+      <section class="card">
+        <h2>Process Video</h2>
+        <video controls playsinline preload="metadata">
+          <source src="images/video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- PROBLEMS -->
+      <section class="card">
+        <h2>Problems & Solutions</h2>
+
+        <div class="problem">
+          <b>Problem 1 — Sketch stuck on “Loading…”</b>
+          The sketch stayed on “Loading…” because assets in
+          <code>preload()</code> failed to load, which prevented p5.js from
+          starting.
+
+          <div class="img-grid">
+            <img src="images/error-1.png" alt="Console error screenshot 1">
+            <img src="images/error-2.png" alt="Console error screenshot 2">
+          </div>
+        </div>
+
+        <div class="problem">
+          <b>Problem 2 — Images not loading (404 error)</b>
+          The images did not appear because their file paths were incorrect.
+          I fixed this by adding the correct folder prefix
+          (<code>libraries/</code>) and matching file names exactly.
+        </div>
+
+        <div class="problem">
+          <b>Problem 3 — Sound file not playing</b>
+          The sound failed to load due to an incorrect file path and browser
+          audio restrictions. I corrected the path and triggered the sound
+          through user interaction (<code>mousePressed()</code>).
+        </div>
+
+        <div class="problem">
+          <b>Problem 4 — Mouse click not triggering sound consistently</b>
+          Click detection was incorrect because it used the canvas center
+          instead of the moving object’s position.
+        </div>
+      </section>
+
+      <!-- SKETCH -->
+      <section class="card">
+        <h2>Sketch</h2>
+        <p>
+          The animation below runs automatically and demonstrates
+          non-linear, non-interactive movement with image and sound feedback.
+        </p>
+        <!-- p5 canvas will appear below -->
+      </section>
+
+    </main>
+
+    <!-- p5 sketch -->
     <script src="sketch.js"></script>
   </body>
 </html>
