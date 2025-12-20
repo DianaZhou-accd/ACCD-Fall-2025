@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #535353;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+.hint {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  font-size: 12px;
+  opacity: 0.4;
+}
