@@ -1,5 +1,5 @@
 let numLines = 10;
-let arcTime = 0;
+let time = 0;
 
 function setup() {
   createCanvas(400, 400);
